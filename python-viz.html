@@ -1,0 +1,43 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>Python Visualization</title>
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <py-env>
+        - matplotlib
+    </py-env>
+</head>
+<body>
+    <h1 align="center">Matplotlib Demo</h1>
+    <py-script align="center"> print("line plot")</py-script>
+    <div id="lineplot"></div>
+    <py-script output="lineplot">
+# python code goes here ...
+import matplotlib.pyplot as plt
+
+fig, ax = plt.subplots()
+
+# initializing the data
+x = [10, 20, 30, 40]
+y = [20, 25, 35, 55]
+
+# plotting the data
+plt.plot(x, y, color='green', linewidth=3, marker='o', markersize=15, linestyle='--')
+
+# adding title to the plot
+plt.title("Line Chart")
+
+# adding label on the y-axis
+plt.ylabel('Y-Axis')
+
+# adding label on the x-axis
+plt.xlabel('X-Axis')
+
+fig
+    </py-script>
+</body>
+</html>
